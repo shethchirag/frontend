@@ -1,8 +1,8 @@
-import { Add as AddIcon } from "@mui/icons-material";
+import { Add as AddIcon, Remove } from "@mui/icons-material";
 import { Avatar, IconButton, ListItem, Stack, Typography } from "@mui/material";
 import { memo } from "react";
 
-const UserItem = ({ user, handler, handlerIsLoading }) => {
+const UserItem = ({ user, handler, handlerIsLoading, isAdded = false }) => {
   const { name, _id, avatar } = user;
   return (
     <ListItem>
@@ -19,9 +19,10 @@ const UserItem = ({ user, handler, handlerIsLoading }) => {
             flexGrow: 1,
             display: "-webkit-box",
             WebkitLineClamp: 1,
-            webkitBoxOrient: "vertical",
+            WebkitBoxOrient: "vertical",
             overflow: "hidden",
             textOverflow: "ellipsis",
+            width: "100%",
           }}
         >
           {name}
@@ -29,16 +30,16 @@ const UserItem = ({ user, handler, handlerIsLoading }) => {
         <IconButton
           size="small"
           sx={{
-            bgcolor: "primary.main",
+            bgcolor: isAdded ? "error.main" : "primary.main",
             color: "white",
             "&:hover": {
-              bgcolor: "primary.dark",
+              bgcolor: isAdded ? "error.dark" : "primary.dark",
             },
           }}
           onClick={() => handler(_id)}
           disabled={handlerIsLoading}
         >
-          <AddIcon />
+          {isAdded ? <Remove /> : <AddIcon />}
         </IconButton>
       </Stack>
     </ListItem>

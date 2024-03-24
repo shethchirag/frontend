@@ -39,3 +39,55 @@ export const sampleUsers = [
     _id: "2",
   },
 ];
+
+export const sampleNotifications = [
+  {
+    sender: {
+      avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+      name: "john deo",
+    },
+    _id: "1",
+  },
+  {
+    sender: {
+      avatar: "https://randomuser.me/api/portraits/men/3.jpg",
+      name: "john deo",
+    },
+    _id: "2",
+  },
+];
+
+export const sampleMessages = [
+  {
+    attachments: [
+      {
+        public_id: "1",
+        url: "https://www.w3schools.com/w3images/avatar2.png",
+      },
+    ],
+    content: "Hello",
+    _id: "snsnsnshcbkdsv",
+    sender: {
+      _id: "user._id",
+      name: "john deo",
+    },
+    chat: "chatID",
+    createdAt: "2022-03-15T14:44:00.000Z",
+  },
+  {
+    attachments: [
+      {
+        public_id: "1",
+        url: "https://www.w3schools.com/w3images/avatar2.png",
+      },
+    ],
+    content: "Hello",
+    _id: "snsnsnshcbk",
+    sender: {
+      _id: "xshgchsvcjhcbskc",
+      name: "john deo",
+    },
+    chat: "chatID",
+    createdAt: "2022-03-15T14:44:00.000Z",
+  },
+];

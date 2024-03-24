@@ -18,9 +18,7 @@ const SearchDialog = () => {
   const search = useInputValidation("", {});
   let isLoadingSendFriendRequest = false;
   const [users, setUsers] = useState(sampleUsers);
-  const addfriendHandler = (id) => {
-    console.log(id);
-  };
+  const addfriendHandler = (id) => {};
   return (
     <Dialog open>
       <Stack p={"2rem"} direction={"column"} width={"25rem"}>

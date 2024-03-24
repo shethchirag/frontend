@@ -1,7 +1,6 @@
 import { Stack } from "@mui/material";
 import PropTypes from "prop-types";
 import ChatItemMemo from "../shared/ChatItem";
-import { CleaningServices } from "@mui/icons-material";
 
 const ChatList = ({
   w = "100%",
@@ -16,7 +15,6 @@ const ChatList = ({
   ],
   handleDeleteChat,
 }) => {
-  console.log(newMessagesAlert);
   return (
     <Stack width={w} direction={"column"}>
       {chats?.map((data, index) => {
@@ -25,9 +23,8 @@ const ChatList = ({
         const newMessageAlert = newMessagesAlert.find(
           ({ chatId }) => chatId === _id
         );
-        console.log(onlineUsers);
         const isOnline = members?.some((member) => onlineUsers.includes(_id));
-        console.log(isOnline);
+
         return (
           <ChatItemMemo
             newMessageAlert={newMessageAlert}

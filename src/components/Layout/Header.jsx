@@ -26,20 +26,16 @@ const Header = () => {
 
   const navigate = useNavigate();
   const handleMobile = () => {
-    console.log("mobile");
     setIsMobile(!isMobile);
   };
   const openSearch = () => {
-    console.log("dialog");
     setIsSearch(!isSearch);
   };
 
   const openNewGroupDialog = () => {
-    console.log("group");
     setIsNewGroup(!isNewGroup);
   };
   const openNewNotificationDialog = () => {
-    console.log("notification");
     setIsNotification(!isNotification);
   };
   const navigateToGroup = () => {
